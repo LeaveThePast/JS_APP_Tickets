@@ -1,0 +1,116 @@
+body {
+  display: flex;
+  justify-content: center;
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 20px;
+}
+
+button {
+  box-sizing: border-box;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 4px;
+  width: calc(50% - 5px);
+  margin-right: 10px;
+  float: right;
+}
+
+button:last-child {
+  margin-right: 0px;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+/* Add Ticket */
+#ticketForm,
+#ticketUpdateForm {
+  width: 50vw;
+  position: absolute;
+  z-index: 1;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  box-shadow: 0 10px 20px 0 #e2e4e6, 0 6px 20px 0 #0056b3;
+  text-align: center;
+}
+
+.formInactive {
+  display: none;
+}
+
+input,
+textarea,
+select {
+  margin-bottom: 10px;
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.ticketFormActionButtons {
+  display: flex;
+}
+
+#ticketForm button {
+  margin-bottom: 10px;
+  margin-right: 10px;
+  width: 50%;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+#ticketForm button:last-child {
+  margin-right: 0;
+}
+
+/* Tickets List */
+.ticketListContainer {
+  background-color: #fff;
+  min-height: 50px;
+  min-width: 400px;
+  padding: 20px;
+  border: 1px solid #007bff;
+  border-radius: 5px;
+  box-shadow: 0 10px 20px 0 #e2e4e6, 0 6px 20px 0 #0056b3;
+}
+
+.ticketListContainerLabel {
+  display: flex;
+  box-sizing: border-box;
+  font-size: 20px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.ticket {
+  display: flex;
+  margin-bottom: 20px;
+  padding: 10px;
+  border: 4px solid #007bff;
+  border-radius: 5px;
+}
+
+.ticket p {
+  box-sizing: border-box;
+  width: 80%;
+}
+
+.ticket button {
+  width: 20%;
+}
+
+.ticket:hover {
+  margin-bottom: 20px;
+  padding: 10px;
+  border: 5px solid #0056b3;
+  border-radius: 5px;
+  cursor: pointer;
+}

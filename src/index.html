@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <!-- <link rel="stylesheet" href="./css/style.css" /> -->
+  </head>
+  <body>
+    <div id="ticketForm" class="formInactive">
+      <h2>Create a Ticket</h2>
+      <input type="text" id="ticketName" placeholder="Ticket Name" />
+      <textarea
+        id="ticketDescription"
+        placeholder="Ticket Description"
+      ></textarea>
+      <select id="ticketStatus">
+        <option value="Open">Open</option>
+        <option value="In Progress">In Progress</option>
+        <option value="Closed">Closed</option>
+      </select>
+      <div class="ticketFormActionButtons">
+        <button id="createTicketBtn">Create Ticket</button>
+        <button id="closeTicketFormBtn">Close</button>
+      </div>
+    </div>
+
+    <div id="ticketUpdateForm" class="formInactive">
+      <h2>Update a Ticket</h2>
+      <input type="text" id="ticketUpdateName" placeholder="Ticket Name" />
+      <textarea
+        id="ticketUpdateDescription"
+        placeholder="Ticket Description"
+      ></textarea>
+      <select id="ticketUpdateStatus">
+        <option value="Open">Open</option>
+        <option value="In Progress">In Progress</option>
+        <option value="Closed">Closed</option>
+      </select>
+      <div class="ticketFormActionButtons">
+        <button id="UpdateTicketBtn">Update Ticket</button>
+        <button id="closeUpdateTicketFormBtn">Close</button>
+      </div>
+    </div>
+
+    <div class="ticketListContainer">
+      <button id="addTicketBtn">Add Ticket</button>
+      <h1 class="ticketListContainerLabel">Tickets:</h1>
+      <div id="ticketList"></div>
+    </div>
+    <!-- <script type="module" src="./js/app.js"></script> -->
+  </body>
+</html>
