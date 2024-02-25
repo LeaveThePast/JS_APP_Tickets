@@ -1,4 +1,4 @@
-name: JS_Catch_A_Mole
+name: JS_APP_Tickets
 
 on: [push, pull_request]
 
