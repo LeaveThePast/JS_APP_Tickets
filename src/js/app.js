@@ -41,27 +41,36 @@ document.addEventListener("DOMContentLoaded", () => {
       console.error("Error fetching tickets:", error);
     }
   }
+
+  // Нажатие по тикету
   function handleTicketClick(event) {
-    const ticketElement = event.target.closest(".ticket");
-    if (ticketElement) {
-      const ticketId = ticketElement.dataset.id;
-      const ticket = tickets.find((t) => t.id === ticketId);
-
-      if (ticket) {
-        updateTicket(ticket.id, ticket.name, ticket.description, ticket.status);
-      }
-    }
-  }
-
-  function handleDeleteButtonClick(event) {
     const deleteButton = event.target.closest(".deleteButton");
+
     if (deleteButton) {
+      event.stopPropagation();
       const ticketElement = deleteButton.closest(".ticket");
       const ticketId = ticketElement.dataset.id;
 
       deleteTicket(ticketId);
+    } else {
+      const ticketElement = event.target.closest(".ticket");
+      if (ticketElement) {
+        const ticketId = ticketElement.dataset.id;
+        const ticket = tickets.find((t) => t.id === ticketId);
+
+        if (ticket) {
+          updateTicket(
+            ticket.id,
+            ticket.name,
+            ticket.description,
+            ticket.status
+          );
+        }
+      }
     }
   }
+
+  ticketListElement.addEventListener("click", handleTicketClick);
 
   function renderTickets(tickets) {
     ticketListElement.innerHTML = "";
@@ -83,9 +92,6 @@ document.addEventListener("DOMContentLoaded", () => {
       ticketListElement.appendChild(ticketElement);
     });
   }
-
-  ticketListElement.addEventListener("click", handleTicketClick);
-  ticketListElement.addEventListener("click", handleDeleteButtonClick);
 
   async function createTicket() {
     try {
